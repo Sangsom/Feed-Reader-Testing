@@ -26,7 +26,6 @@ $(function () {
             expect(allFeeds.length).not.toBe(0);
         });
 
-
         /* TODO: Write a test that loops through each feed
          * in the allFeeds object and ensures it has a URL defined
          * and that the URL is not empty.
@@ -40,7 +39,6 @@ $(function () {
             });
         });
 
-
         /* TODO: Write a test that loops through each feed
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
@@ -50,24 +48,32 @@ $(function () {
                 const { name } = feed;
                 expect(name).toBeDefined();
                 expect(name.length).not.toBe(0);
-            })
-        })
+            });
+        });
+    });
+
+    /* TODO: Write a new test suite named "The menu" */
+    describe('The menu', () => {
+        var body = document.querySelector('body');
+
+        /* TODO: Write a test that ensures the menu element is
+         * hidden by default. You'll have to analyze the HTML and
+         * the CSS to determine how we're performing the
+         * hiding/showing of the menu element.
+         */
+        it('element is hidden by default', () => {
+            expect(body.classList.contains('menu-hidden')).toBeTruthy();
+        });
+
+        /* TODO: Write a test that ensures the menu changes
+        * visibility when the menu icon is clicked. This test
+        * should have two expectations: does the menu display when
+        * clicked and does it hide when clicked again.
+        */
     });
 
 
-    /* TODO: Write a new test suite named "The menu" */
 
-    /* TODO: Write a test that ensures the menu element is
-     * hidden by default. You'll have to analyze the HTML and
-     * the CSS to determine how we're performing the
-     * hiding/showing of the menu element.
-     */
-
-    /* TODO: Write a test that ensures the menu changes
-     * visibility when the menu icon is clicked. This test
-     * should have two expectations: does the menu display when
-     * clicked and does it hide when clicked again.
-     */
 
     /* TODO: Write a new test suite named "Initial Entries" */
 
