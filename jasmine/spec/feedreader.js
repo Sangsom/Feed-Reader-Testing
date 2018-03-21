@@ -124,6 +124,6 @@ $(function () {
             newFeed = document.querySelector('.feed').firstElementChild;
             expect(initialFeed).not.toBe(newFeed);
             done();
-        })
+        });
     });
 }());
