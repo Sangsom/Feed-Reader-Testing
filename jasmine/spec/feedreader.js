@@ -72,6 +72,7 @@ $(function () {
         it('at least 1 entry is loaded to the feed', done => {
             const entry = document.querySelector('article.entry');
             expect(feed.children.item(0).contains(entry)).toBeTruthy();
+            expect($('.feed .entry').length).toBeGreaterThan(0);
             done();
         });
     });
